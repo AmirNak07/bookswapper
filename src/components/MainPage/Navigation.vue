@@ -5,7 +5,7 @@
 <template>
   <nav class="nav">
     <div class="left-nav">
-      <img src="/logo/logo.png" alt="Лого" class="logo">
+      <img src="public/logo.png" alt="Лого" class="logo">
       <h1 class="heading">КнигоБар</h1>
     </div>
     <div class="right-nav">

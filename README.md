@@ -1,4 +1,4 @@
-# bookswapper
+# Book Swapper
 
 Frontend for book swapping marketplace (avito-like).
 
