@@ -6,7 +6,7 @@ defineProps<{
 
 <template>
   <div>
-    <p>Как это работает?</p>
+    <p>{{question}}</p>
     <img src="/public/icons/checkmark.svg" alt="" class="faq-question-checkmark">
   </div>
 </template>
@@ -20,6 +20,10 @@ div {
   border-radius: 40px;
   padding: 10px 50px;
   margin: 15px 0;
+}
+
+div:hover {
+  cursor: pointer;
 }
 
 p {

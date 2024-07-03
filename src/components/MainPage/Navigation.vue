@@ -4,11 +4,11 @@
 
 <template>
   <nav>
-    <div>
+    <div class="left-nav">
       <img src="/public/logo.png" alt="Лого">
       <h1>КнигоБар</h1>
     </div>
-    <div>
+    <div class="right-nav">
       <a href="#" class="ads">Объявления</a>
       <a href="#" class="login">Вход/Регистрация</a>
     </div>
@@ -19,7 +19,7 @@
 nav {
   position: fixed;
   left: 0;
-  top: 0;
+  top: -250px;
   right: 0;
   bottom: auto;
   background-color: #FFFDED;
@@ -28,10 +28,24 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 15px 20px;
+  margin: 15px 20px;animation: pop-up-nav 1.5s ease-in 0s 1 normal forwards;
 }
 
-nav {
+@keyframes pop-up-nav {
+  from {
+    top: -250px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+.left-nav {
+  display: flex;
+  align-items: center;
+}
+
+.right-nav {
   display: flex;
   align-items: center;
 }
