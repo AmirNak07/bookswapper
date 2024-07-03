@@ -35,6 +35,10 @@ a:hover {
     cursor: pointer;
 }
 
+.hide {
+    display: none;
+}
+
 /* Nav */
 
 .nav {
@@ -263,7 +267,7 @@ a:hover {
 .faq-question {
     background-color: #5C4742;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     width: 80%;
     border-radius: 40px;
     padding: 10px 50px;
@@ -274,8 +278,46 @@ a:hover {
     cursor: pointer;
 }
 
+.faq-question-title-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .faq-question-title {
     font-size: 50px;
+}
+
+/* Animations for question */
+
+.open-window {
+    animation: 1s open-window;
+}
+
+.close-window {
+    animation: 1s close-window ;
+}
+
+@keyframes open-window {
+    from {
+        margin-top: -75px;
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+        margin-top: 25px;
+    }
+}
+
+@keyframes close-window {
+    from {
+        opacity: 100;
+        margin-top: 25px;
+    }
+    to {
+        margin-top: -75px;
+        opacity: 0;
+    }
 }
 
 /* Footer */
