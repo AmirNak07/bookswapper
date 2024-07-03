@@ -201,3 +201,31 @@ a:hover {
 #aside-image-6 {
     margin-right: -20%;
 }
+
+/* Article (join) */
+
+.join {
+    background-color: #5A2A27;
+    padding-top: 100px;
+    padding-bottom: 120px;
+    text-align: center;
+}
+
+.join-title {
+    font-size: 60px;
+    margin-bottom: 50px;
+    font-size: 60px;
+}
+
+.join-text {
+    font-size: 40px;
+    margin-bottom: 80px;
+    font-family: "Montserrat-Regular", sans-serif;
+}
+
+.join-button {
+    background-color: #8D5B4C;
+    padding: 20px 50px;
+    border-radius: 90px;
+    font-size: 30px;
+}
