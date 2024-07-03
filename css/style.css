@@ -229,3 +229,37 @@ a:hover {
     border-radius: 90px;
     font-size: 30px;
 }
+
+/* Article (FAQ) */
+
+.faq {
+    background-color: #FFFDED;
+    padding-top: 100px;
+}
+
+.faq-question-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.faq-title {
+    color: #5A2A27;
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.faq-question {
+    background-color: #5C4742;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    border-radius: 40px;
+    padding: 10px 50px;
+    margin: 15px 0;
+}
+
+.faq-question-title {
+    font-size: 50px;
+}
