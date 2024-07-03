@@ -1,35 +1,36 @@
-@import './base.css';
+/* Шрифты */
 
-#app {
-  max-width: 1280px;
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("public/fonts/Montserrat/static/Montserrat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat-SemiBold";
+  src: url("public/fonts/Montserrat/static/Montserrat-SemiBold.ttf");
+}
+
+/* Стили тегов */
+
+body {
   margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+  height: 4000px;
+  width: 100%;
 }
 
-a,
-.green {
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 auto;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  color: #FFFDED;
+}
+
+p, a {
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 25px;
+  color: #FFFDED;
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+a:hover {
+  cursor: pointer;
 }
