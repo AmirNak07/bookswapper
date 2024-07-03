@@ -3,12 +3,12 @@
 </script>
 
 <template>
-  <nav class="nav">
-    <div class="left-nav">
-      <img src="/public/logo.png" alt="Лого" class="logo">
-      <h1 class="heading">КнигоБар</h1>
+  <nav>
+    <div>
+      <img src="/public/logo.png" alt="Лого">
+      <h1>КнигоБар</h1>
     </div>
-    <div class="right-nav">
+    <div>
       <a href="#" class="ads">Объявления</a>
       <a href="#" class="login">Вход/Регистрация</a>
     </div>
@@ -16,7 +16,7 @@
 </template>
 
 <style scoped>
-.nav {
+nav {
   position: fixed;
   left: 0;
   top: 0;
@@ -31,22 +31,17 @@
   margin: 15px 20px;
 }
 
-.left-nav {
+nav {
   display: flex;
   align-items: center;
 }
 
-.right-nav {
-  display: flex;
-  align-items: center;
-}
-
-.logo {
+img {
   height: 110px;
   padding-left: 20px;
 }
 
-.heading {
+h1 {
   color: #5A2A27;
   font-size: 30px;
   margin: 0;

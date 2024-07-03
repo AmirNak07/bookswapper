@@ -3,32 +3,24 @@
 </script>
 
 <template>
-  <header class="header">
-    <div class="header-wrapper">
-      <h1 class="header-title">КнигоБар</h1>
-      <p class="header-text">Погрузитесь в мир книг с КнигоБаром - местом, где слова оживают и приключения начинаются!</p>
-      <a href="#" class="button-more">Узнать больше</a>
+  <header>
+    <div>
+      <h1>КнигоБар</h1>
+      <p>Погрузитесь в мир книг с КнигоБаром - местом, где слова оживают и приключения начинаются!</p>
+      <a href="#">Узнать больше</a>
     </div>
   </header>
 </template>
 
 <style scoped>
-.header {
+header {
   background-image: url("../../../public/img/header-book.jpeg");
   background-size: cover;
   justify-content: center;
   padding-bottom: 120px;
 }
 
-
-.header {
-  background-image: url("../../../public/img/header-book.jpeg");
-  background-size: cover;
-  justify-content: center;
-  padding-bottom: 120px;
-}
-
-.header-wrapper {
+div {
   padding-top: 400px;
   display: flex;
   flex-direction: column;
@@ -36,19 +28,19 @@
   margin: 0 200px;
 }
 
-.header-title {
+h1 {
   color: #FFFDED;
   margin-bottom: 30px;
   font-size: 60px;
 }
 
-.header-text {
+p {
   color: #FFFDED;
   text-align: center;
   font-size: 40px;
 }
 
-.button-more {
+a {
   padding: 30px;
   border: 3px solid #FFFDED;
   border-radius: 90px;

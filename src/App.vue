@@ -1,17 +1,13 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
 import Navigation from "@/components/MainPage/Navigation.vue";
+import Footer from "@/components/MainPage/Footer.vue";
 </script>
 
 <template>
   <Navigation/>
-  
-  <!--
-  <RouterLink to="/">Home</RouterLink>
-  <RouterLink to="/about">About</RouterLink>
-  -->
-
   <RouterView />
+  <Footer/>
 </template>
 
 <style scoped>

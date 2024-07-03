@@ -3,17 +3,17 @@
 </script>
 
 <template>
-  <main class="main">
-    <div class="main-wrapper">
-      <article class="about">
+  <main>
+    <div>
+      <article>
         <div class="about-wrapper">
           <div class="about-text-wrapper">
-            <h1 class="about-title">КнигоБар</h1>
-            <p class="about-text">Добро пожаловать на самую крутую площадку для обмена книгами между людьми! Здесь слова летают быстрее, чем молния, и истории переплетаются как спагетти на вилке.</p>
-            <p class="about-text">Мы создали этот сайт, чтобы разгонять скучные вечера и превращать их в захватывающие приключения. Забудьте о пыли на книжной полке, здесь каждая книга находит своего читателя!</p>
-            <p class="about-text">Присоединяйтесь к нам, чтобы погрузиться в мир слов и открыть для себя новые литературные горизонты!</p>
+            <h1>КнигоБар</h1>
+            <p>Добро пожаловать на самую крутую площадку для обмена книгами между людьми! Здесь слова летают быстрее, чем молния, и истории переплетаются как спагетти на вилке.</p>
+            <p>Мы создали этот сайт, чтобы разгонять скучные вечера и превращать их в захватывающие приключения. Забудьте о пыли на книжной полке, здесь каждая книга находит своего читателя!</p>
+            <p>Присоединяйтесь к нам, чтобы погрузиться в мир слов и открыть для себя новые литературные горизонты!</p>
           </div>
-          <img src="../../../public/img/main-book.jpeg" alt="" class="about-image">
+          <img src="../../../public/img/main-book.jpeg" alt="">
         </div>
       </article>
     </div>
@@ -21,7 +21,7 @@
 </template>
 
 <style scoped>
-.about {
+article {
   background-color: #8D5B4C;
   padding: 75px;
 }
@@ -32,7 +32,7 @@
   display: flex;
 }
 
-.about-image {
+img {
   overflow: hidden;
   border-radius: 90px;
   height: 650px;
@@ -46,11 +46,11 @@
   padding: 60px 100px 80px 60px ;
 }
 
-.about-title {
+h1 {
   font-size: 45px;
 }
 
-.about-text {
+p {
   font-size: 27px;
 }
 </style>

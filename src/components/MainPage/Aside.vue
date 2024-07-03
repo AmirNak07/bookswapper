@@ -3,24 +3,24 @@
 </script>
 
 <template>
-  <aside class="aside">
+  <aside>
     <div class="aside-wrapper">
       <div class="aside-image-wrapper">
-        <img src="/public/img/book1.jpeg" alt="" class="aside-image" id="aside-image-1">
-        <img src="/public/img/book3.jpeg" alt="" class="aside-image" id="aside-image-2">
-        <img src="/public/img/book5.jpeg" alt="" class="aside-image" id="aside-image-3">
-      </div>+
+        <img src="/public/img/book1.jpeg" alt="" id="aside-image-1">
+        <img src="/public/img/book3.jpeg" alt="" id="aside-image-2">
+        <img src="/public/img/book5.jpeg" alt="" id="aside-image-3">
+      </div>
       <div class="aside-image-wrapper">
-        <img src="/public/img/book2.jpeg" alt="" class="aside-image" id="aside-image-4">
-        <img src="/public/img/book4.jpeg" alt="" class="aside-image" id="aside-image-5">
-        <img src="/public/img/book6.jpeg" alt="" class="aside-image" id="aside-image-6">
+        <img src="/public/img/book2.jpeg" alt="" id="aside-image-4">
+        <img src="/public/img/book4.jpeg" alt="" id="aside-image-5">
+        <img src="/public/img/book6.jpeg" alt="" id="aside-image-6">
       </div>
     </div>
   </aside>
 </template>
 
 <style scoped>
-.aside {
+aside {
   background-color: #FFFDED;
   padding-top: 75px;
   padding-bottom: 50px;
@@ -37,7 +37,7 @@
   overflow: hidden;
 }
 
-.aside-image {
+img {
   height: 400px;
   width: 50%;
   border-radius: 90px;

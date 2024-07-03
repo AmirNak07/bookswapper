@@ -3,35 +3,35 @@
 </script>
 
 <template>
-  <article class="join">
+  <article>
     <div class="join-wrapper">
-      <h1 class="join-title">Присоединяйтесь к<br>Нам!</h1>
-      <h2 class="join-text">Откройте новые миры через книги!</h2>
-      <a href="#" class="join-button">Начать обмен</a>
+      <h1>Присоединяйтесь к<br>Нам!</h1>
+      <h2>Откройте новые миры через книги!</h2>
+      <a href="#">Начать обмен</a>
     </div>
   </article>
 </template>
 
 <style scoped>
-.join {
+article {
   background-color: #5A2A27;
   padding-top: 100px;
   padding-bottom: 120px;
   text-align: center;
 }
 
-.join-title {
+h1 {
   font-size: 60px;
   margin-bottom: 50px;
 }
 
-.join-text {
+h2 {
   font-size: 40px;
   margin-bottom: 80px;
   font-family: "Montserrat-Regular", sans-serif;
 }
 
-.join-button {
+a {
   background-color: #8D5B4C;
   padding: 20px 50px;
   border-radius: 90px;
