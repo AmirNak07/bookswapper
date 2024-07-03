@@ -1,0 +1,159 @@
+/* Шрифты */
+
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url("/fonts/Montserrat/static/Montserrat-Regular.ttf")
+}
+
+@font-face {
+    font-family: "Montserrat-SemiBold";
+    src: url("/fonts/Montserrat/static/Montserrat-SemiBold.ttf");
+}
+
+/* Стили тегов */
+
+body {
+    margin: 0 auto;
+    height: 4000px;
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 auto;
+    font-family: "Montserrat-SemiBold";
+    color: #FFFDED;
+}
+
+p, a {
+    font-family: "Montserrat-Regular";
+    font-size: 25px;
+    color: #FFFDED;
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+/* Nav */
+
+.nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    background-color: #FFFDED;
+    border-radius: 120px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 20px;
+}
+
+.left-nav {
+    display: flex;
+    align-items: center;
+}
+
+.right-nav {
+    display: flex;
+    align-items: center;  
+}
+
+.logo {
+    height: 110px;
+    padding-left: 20px;
+}
+
+.heading {
+    color: #5A2A27;
+    font-size: 30px;
+    margin: 0;
+}
+
+.login {
+    margin: 0 50px;
+    background-color: #5A2A27;
+    padding: 20px 50px;
+    color: #FFFDED;
+    border-radius: 120px;
+}
+
+.ads {
+    color: #5A2A27;
+}
+
+/* Header */
+
+.header {
+    background-image: url("../img/header-book.jpeg");
+    background-size: cover;
+    justify-content: center;
+    padding-bottom: 120px;
+}
+
+.header-wrapper {
+    padding-top: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 200px;
+}
+
+.header-title {
+    color: #FFFDED;
+    margin-bottom: 30px;
+    font-size: 60px;
+}
+
+.header-text {
+    color: #FFFDED;
+    text-align: center;
+    font-size: 40px;
+}
+
+.button-more {
+    padding: 30px;
+    border: 3px solid #FFFDED;
+    border-radius: 90px;
+}
+
+/* Main */
+
+/* Article (about) */
+
+.about {
+    background-color: #8D5B4C;
+    padding: 75px;
+}
+
+.about-wrapper {
+    background-color: #5C4742;
+    border-radius: 90px;
+    display: flex;
+}
+
+.about-image {
+    overflow: hidden;
+    border-radius: 90px;
+    height: 650px;
+    object-fit: cover;
+    width: 100%;
+    height: inherit;
+}
+
+.about-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 100px 80px 60px ;
+}
+
+.about-title {
+    font-size: 45px;
+}
+
+.about-text {
+    font-size: 27px;
+}
