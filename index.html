@@ -14,9 +14,25 @@
         </div>
         <div class="right-nav">
             <a href="#" class="ads">Объявления</a>
-            <a href="#" class="login">Вход/Регистрация</a>
+            <a href="#login" class="nav-login-button" id="nav-login-button">Вход/Регистрация</a>
         </div>
     </nav>
+    <div class="login-wrapper hide" id="login-menu">
+        <div class="login">
+            <div class="login-title-wrapper">
+                <h1 class="login-title">Вход</h1>
+                <img src="/logo/close.svg" alt="" class="login-exit" id="login-exit">
+            </div>
+            <div class="login-form-wrapper">
+                <form action="#" method="post" class="login-form">
+                    <input type="text" placeholder="Логин" class="login-form-input">
+                    <input type="password" placeholder="Пароль" class="login-form-input">
+                    <input type="button" value="Войти" class="login-form-input login-form-input-button">
+                </form>
+                <a href="#" class="go-to-register">Нет аккаунта? <span class="go-register">Регистрация</span></a>
+            </div>
+        </div>
+    </div>
     <header class="header">
         <div class="header-wrapper">
             <h1 class="header-title">КнигоБар</h1>

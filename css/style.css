@@ -14,17 +14,16 @@
 
 body {
     margin: 0 auto;
-    height: 4000px;
     width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, input {
     margin: 0 auto;
     font-family: "Montserrat-SemiBold", sans-serif;
     color: #FFFDED;
 }
 
-p, a {
+p, a{
     font-family: "Montserrat-Regular", sans-serif;
     font-size: 25px;
     color: #FFFDED;
@@ -37,6 +36,7 @@ a:hover {
 
 .hide {
     display: none;
+    visibility: hidden;
 }
 
 /* Nav */
@@ -87,7 +87,7 @@ a:hover {
     margin: 0;
 }
 
-.login {
+.nav-login-button {
     margin: 0 50px;
     background-color: #5A2A27;
     padding: 20px 50px;
@@ -343,4 +343,95 @@ a:hover {
 .footer-logo {
     height: 110px;
     margin-right: 5%;
+}
+
+/* Login */
+
+.login-wrapper {
+    background-color: #5A2A277F;
+    min-height: 540%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+.login {
+    display: flex;
+    margin-top: 200px;
+    background-color: #FFFDED;
+    width: 85%;
+    border-radius: 45px;
+    flex-direction: column;
+    padding-top: 40px;
+    height: fit-content;
+}
+
+.login-title-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+
+.login-title {
+    color: #5A2A27;
+    font-size: 45px;
+    align-self: center;
+    padding-left: 80px;
+}
+
+.login-exit {
+    padding-right: 50px;
+    cursor: pointer;
+}
+
+.login-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 80px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.login-form-input {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px 0px 20px 25px;
+    width: 80%;
+    border-radius: 15px;
+    border: 3px solid #5A2A27;
+    background-color: #FFFDED;
+    font-size: 25px;
+    color: #5A2A27;
+}
+
+/* Для placeholder */
+
+::placeholder {
+    color: #5A2A27;
+ }
+
+.login-form-input-button {
+    align-self: center;
+    margin-bottom: 50px;
+    background-color: #5A2A27;
+    color: #FFFDED;
+    border: none;
+    padding: 20px 30px;
+    width: 20%;
+}
+
+.go-to-register {
+    color: #5A2A27;
+    font-size: 30px;
+}
+
+.go-register {
+    text-decoration: underline;
 }

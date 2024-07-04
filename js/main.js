@@ -3,12 +3,10 @@ let first_question_text = document.getElementById("first-question-text")
 
 first_question_button.onclick = function () {
     if ((String(first_question_text.classList).includes("hide"))) {
-        console.log("тут")
         first_question_text.classList.add("open-window")
         first_question_text.classList.remove("close-window")
         first_question_text.classList.remove("hide")
     } else {
-        console.log("тута")
         first_question_text.classList.remove("open-window")
         first_question_text.classList.add("close-window")
         setTimeout(function () {
@@ -55,5 +53,18 @@ third_question_button.onclick = function () {
         }, 1000)
     }
 }
+
+let nav_login_button = document.getElementById("nav-login-button")
+let login_menu = document.getElementById("login-menu")
+let close_menu = document.getElementById("login-exit")
+
+nav_login_button.onclick = function () {
+    login_menu.classList.toggle("hide")
+}
+
+close_menu.onclick = function () {
+    login_menu.classList.toggle("hide")
+}
+
 
 // Костыли наше всё
