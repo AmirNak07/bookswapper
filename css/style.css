@@ -435,3 +435,89 @@ a:hover {
 .go-register {
     text-decoration: underline;
 }
+
+/* Register */
+
+.register-wrapper {
+    background-color: #5A2A277F;
+    min-height: 540%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+.register {
+    display: flex;
+    margin-top: 200px;
+    background-color: #FFFDED;
+    width: 85%;
+    border-radius: 45px;
+    flex-direction: column;
+    padding-top: 40px;
+    height: fit-content;
+}
+
+.register-title-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+
+.register-title {
+    color: #5A2A27;
+    font-size: 45px;
+    align-self: center;
+    padding-left: 80px;
+}
+
+.register-exit {
+    padding-right: 50px;
+    cursor: pointer;
+}
+
+.register-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 80px;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.register-form-input {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px 0px 20px 25px;
+    width: 80%;
+    border-radius: 15px;
+    border: 3px solid #5A2A27;
+    background-color: #FFFDED;
+    font-size: 25px;
+    color: #5A2A27;
+}
+
+.register-form-input-button {
+    align-self: center;
+    margin-bottom: 50px;
+    background-color: #5A2A27;
+    color: #FFFDED;
+    border: none;
+    padding: 20px 30px;
+    width: 20%;
+}
+
+.change-city {
+    width: 85%;
+}
+
+.go-to-login {
+    color: #5A2A27;
+    font-size: 30px;
+    text-decoration: underline;
+}

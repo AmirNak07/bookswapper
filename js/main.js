@@ -56,15 +56,37 @@ third_question_button.onclick = function () {
 
 let nav_login_button = document.getElementById("nav-login-button")
 let login_menu = document.getElementById("login-menu")
-let close_menu = document.getElementById("login-exit")
 
 nav_login_button.onclick = function () {
     login_menu.classList.toggle("hide")
 }
 
-close_menu.onclick = function () {
+let close_login = document.getElementById("login-exit")
+
+close_login.onclick = function () {
     login_menu.classList.toggle("hide")
 }
 
+
+let register_button = document.getElementById("go-to-register")
+let register_menu = document.getElementById("register-menu")
+
+register_button.onclick = function () {
+    register_menu.classList.toggle("hide")
+    login_menu.classList.add("hide")
+}
+
+let close_register = document.getElementById("register-exit")
+
+close_register.onclick = function () {
+    register_menu.classList.toggle("hide")
+}
+
+let go_to_login = document.getElementById("go-to-login")
+ 
+go_to_login.onclick = function () {
+    register_menu.classList.add("hide")
+    login_menu.classList.remove("hide")
+}
 
 // Костыли наше всё

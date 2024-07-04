@@ -24,12 +24,30 @@
                 <img src="/logo/close.svg" alt="" class="login-exit" id="login-exit">
             </div>
             <div class="login-form-wrapper">
-                <form action="#" method="post" class="login-form">
+                <form action="#" method="get" class="login-form">
                     <input type="text" placeholder="Логин" class="login-form-input">
                     <input type="password" placeholder="Пароль" class="login-form-input">
                     <input type="button" value="Войти" class="login-form-input login-form-input-button">
                 </form>
-                <a href="#" class="go-to-register">Нет аккаунта? <span class="go-register">Регистрация</span></a>
+                <a href="#" class="go-to-register" id="go-to-register">Нет аккаунта? <span class="go-register">Регистрация</span></a>
+            </div>
+        </div>
+    </div>
+    <div class="register-wrapper hide" id="register-menu">
+        <div class="register">
+            <div class="register-title-wrapper">
+                <h1 class="login-title">Регистрация</h1>
+                <img src="/logo/close.svg" alt="" class="register-exit" id="register-exit">
+            </div>
+            <div class="register-form-wrapper">
+                <form action="" method="post" class="register-form">
+                    <input type="text" placeholder="Логин" class="register-form-input">
+                    <input type="password" placeholder="Пароль" class="register-form-input">
+                    <input type="text" placeholder="Отображаемое имя" class="register-form-input">
+                    <input placeholder="Город" type="search" class="register-form-input change-city">
+                    <button type="submit" class="register-form-input register-form-input-button">Войти</button>
+                </form>
+                <a href="#" class="go-to-login" id="go-to-login">Авторизация</a>
             </div>
         </div>
     </div>
