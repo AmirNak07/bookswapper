@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КнигоБар</title>
+    <link rel="stylesheet" href="css/redact-profile-style.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="left-nav">
+            <img src="logo/logo.png" alt="Лого" class="logo">
+            <h1 class="heading">КнигоБар</h1>
+        </div>
+        <div class="right-nav">
+            <a href="#" class="ads">Объявления</a>
+            <a href="#" class="login">Профиль</a>
+        </div>
+    </nav>
+    <div class="register-wrapper hide" id="register-menu">
+        <div class="register">
+            <div class="register-title-wrapper">
+                <h1 class="login-title">Редактировать профиль</h1>
+                <img src="close/close.svg" class="register-exit" id="register-exit">
+            </div>
+            <div class="register-form-wrapper">
+                <form action="" method="post" class="register-form">
+                    <input type="text" placeholder="Логин" class="register-form-input">
+                    <input type="phone" placeholder="Номер телефона" class="register-form-input">
+                    <input type="text" placeholder="Отображаемое имя" class="register-form-input">
+                    <input type="text" list="cities" placeholder="Город" class="register-form-input">
+                    <datalist id="cities">
+                        <option value="Москва"></option>
+                        <option value="Санкт-Петербург"></option>
+                        <option value="Казань"></option>
+                    </datalist>
+                    <button type="submit" class="register-form-input register-form-input-button">Сохранить изменения</button>
+                </form>
+            </div>
+        </div>
+    </div>
+        <main class="main">
+            <div class="wrapper">
+            <div class="main-wrapper">
+                <h1 class="main-title">Профиль</h1>
+                <div class="info-wrapper">
+                    <article class="info">
+                        <div class="info-card-wrapper">
+                            <div class="info-card">
+                                <h1 class="info-card-title">Отображаемое имя:</h1>
+                                <p>Вася Пупкин</p>
+                            </div>
+                            <div class="info-card">
+                                <h1 class="info-card-title">Логин:</h1>
+                                <p>vasekkrutoy2010</p>
+                            </div>
+                            <div class="info-card">
+                                <h1 class="info-card-title">Город:</h1>
+                                <p>Москоу</p> 
+                            </div>
+                            <div class="info-card">
+                                <h1 class="info-card-title">Номер телефона:</h1>
+                                <p>+7(999)999-99-99</p>
+                            </div>
+                            <div class="container-rect">
+                                <div class="rect">
+                                    <h1 class="info-card-title">Редактировать</h1>
+                            </div>
+                                <div class="rect">
+                                    <h1 class="info-card-title">Изменить пароль</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="container-circle">
+                    <div class="circle">
+                        <div class="circle-text">Аватар</div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </main>
+        <footer class="footer">
+            <div class="footer-wrapper">
+                <h1 class="footer-title">©КнигоБар</h1>
+                <img src="logo/logo.png" alt="Логотип" class="footer-logo">
+            </div>
+        </footer>
+</body>
+</html>
