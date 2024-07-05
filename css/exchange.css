@@ -1,0 +1,21 @@
+.nav {
+    background-color: #5A2A27;
+}
+
+.heading {
+    color: #FFFDED;
+}
+
+.ads {
+    color: #FFFDED;
+}
+
+.profile {
+    background-color: #FFFDED;
+    color: #5A2A27;
+}
+
+.header {
+    height: auto;
+    background-image: url("../img/background.jpg");
+}
