@@ -58,6 +58,7 @@ let nav_login_button = document.getElementById("nav-login-button")
 let login_menu = document.getElementById("login-menu")
 
 nav_login_button.onclick = function () {
+    
     login_menu.classList.toggle("hide")
 }
 
