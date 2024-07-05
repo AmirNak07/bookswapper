@@ -27,7 +27,7 @@
                 <img src="./logo/close.svg" alt="" class="login-exit" id="login-exit">
             </div>
             <div class="login-form-wrapper">
-                <form action="#" method="get" class="login-form">
+                <form action="#" method="post" class="login-form">
                     <input type="text" placeholder="Логин" class="login-form-input">
                     <input type="password" placeholder="Пароль" class="login-form-input">
                     <input type="button" value="Войти" class="login-form-input login-form-input-button">
@@ -45,13 +45,18 @@
             </div>
             <div class="register-form-wrapper">
                 <form action="" method="post" class="register-form">
-                    <input type="text" placeholder="Логин" class="register-form-input">
-                    <input type="password" placeholder="Пароль" class="register-form-input">
+                    <input type="text" placeholder="Логин" class="register-form-input" required>
+                    <input type="password" placeholder="Пароль" class="register-form-input" required>
                     <input type="text" placeholder="Отображаемое имя" class="register-form-input">
-                    <select required class="register-form-input">
-                        <option disabled selected hidden>Город</option>
-                    </select>
-                    <button type="submit" class="register-form-input register-form-input-button">Войти</button>
+                    <input type="tel" placeholder="Номер телефона" class="register-form-input" required>
+                    <input list="cities" placeholder="Город" class="register-form-input" required>
+                    <datalist id="cities">
+                        <!-- Надо брать данные из js(у меня не вышло) -->
+                        <option value="Москва"></option>
+                        <option value="Санкт-Петербург"></option>
+                        <option value="Казань"></option>
+                    </datalist>
+                    <button type="submit" class="register-form-input register-form-input-button">Создать</button>
                 </form>
                 <a href="#" class="go-to-login" id="go-to-login">Авторизация</a>
             </div>
