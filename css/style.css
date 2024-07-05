@@ -430,6 +430,7 @@ a:hover {
     border: none;
     padding: 20px 30px;
     width: 20%;
+    cursor: pointer;
 }
 
 .go-to-register {
@@ -515,6 +516,7 @@ a:hover {
     border: none;
     padding: 20px 30px;
     width: 20%;
+    cursor: pointer;
 }
 
 .change-city {
