@@ -36,6 +36,11 @@ a:hover {
     cursor: pointer;
 }
 
+.hide {
+    display: none;
+    visibility: hidden;
+}
+
 /* Nav */
 
 .nav {

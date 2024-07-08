@@ -146,12 +146,9 @@ a:hover {
 /* Avatar */
 
  .container-circle {
-    margin-left: 700px;
-    margin-top: -900px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 400px;
 }
 
 .circle {
