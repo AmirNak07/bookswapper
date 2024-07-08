@@ -20,7 +20,7 @@
             <a href="#main" class="nav-login-button profile" id="nav-login-button">Профиль</a>
         </div>
     </nav>
-    <!--  -->
+    <!-- Search -->
     <section class="search-wrapper">
         <div class="search">
             <h1 class="search-title-books">Книги:</h1>
@@ -30,6 +30,60 @@
             </form>
         </div>
     </section>
+    <!-- Card with book -->
+    <div class="card-wrapper">
+        <div class="card-book-wrapper">
+            <!-- Каждый новый card создаётся из данных с БД -->
+            <!-- TODO: Сделать обработку длинных описаний к книгам  -->
+            <article class="card">
+                <div class="card-title-wrapper">
+                    <h2 class="card-title">Гуливер 1</h2>
+                    <h2 class="card-author">Жан Клод Ван Дам</h2>
+                </div>
+                <p class="card-text">Обменяю книгу вся грязная, старая досталась от бабушки. Сам я читать не умею, способ связи: бла бла бла , мой онлифанс: ... </p>
+                <div class="card-footer">
+                    <p class="card-date">02.06.2024</p>
+                    <p class="card-creator">Дед Максим</p>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-title-wrapper">
+                    <h2 class="card-title">Геливер 2</h2>
+                    <h2 class="card-author">Жан Клод Ван Дам</h2>
+                </div>
+                <p class="card-text">Обменяю книгу вся грязная, старая досталась от бабушки. Сам я читать не умею, способ связи: бла бла бла , мой онлифанс: ...</p>
+                <div class="card-footer">
+                    <p class="card-date">02.06.2024</p>
+                    <p class="card-creator">Дед Максим</p>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-title-wrapper">
+                    <h2 class="card-title">Геливер 3</h2>
+                    <h2 class="card-author">Жан Клод Ван Дам</h2>
+                </div>
+                <p class="card-text">Обменяю книгу вся грязная, старая досталась от бабушки. Сам я читать не умею, способ связи: бла бла бла , мой онлифанс: ...</p>
+                <div class="card-footer">
+                    <p class="card-date">02.06.2024</p>
+                    <p class="card-creator">Дед Максим</p>
+                </div>
+            </article>
+        </div>
+    </div>
+    <!-- Navigation page -->
+    <div class="page-navigation">
+        <a class="change-page-button selected">1</a>
+        <a class="change-page-button">2</a>
+        <a class="change-page-button">3</a>
+        <a disabled class="change-page-button">...</a>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-wrapper">
+            <h1 class="footer-title">©КнигоБар</h1>
+            <img src="./logo/logo.png" alt="Логотип" class="footer-logo">
+        </div>
+    </footer>
     <script src="js/exchange.js"></script>
 </body>
 </html>

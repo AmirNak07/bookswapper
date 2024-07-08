@@ -25,6 +25,10 @@ body {
 
 /* Section (search) */
 
+.search-wrapper {
+    margin-bottom: 25px;
+}
+
 .search {
     background-image: none;
     height: auto;
@@ -73,4 +77,95 @@ body {
     border: none;
     background-color: #5C4742;
     cursor: pointer;
+}
+
+/* Article (Card with books) */
+
+.card-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.card-book-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    width: 90%;
+}
+
+.card {
+    background-color: #8D5B4C;
+    border-radius: 20px;
+    margin: 25px 0 25px 0;
+    padding: 30px;
+    cursor: pointer;
+    overflow-x:scroll
+}
+
+.card-title-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 0 30px 0;
+}
+
+.card-title {
+    font-size: 25px;
+    margin: 0;
+}
+
+.card-author {
+    font-family: "Montserrat-Regular";
+    font-weight: 300;
+    margin: 0;
+}
+
+.card-text {
+    font-size: 20px;
+    margin: 30px 0 60px 0;
+}
+
+.card-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 60px 0 0 0;
+}
+
+.card-date {
+    font-size: 20px;
+    margin: 0;
+}
+
+.card-creator {
+    font-size: 20px;
+    margin: 0;
+}
+
+/* Page navigation */
+
+.page-navigation {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.change-page-button {
+    background-color: #5C4742;
+    color: #FFFDED;
+    border: none;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin: 0 20px;
+    font-size: 20px;
+    cursor: pointer;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.selected {
+    background-color: #8D5B4C;
 }
