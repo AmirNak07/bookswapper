@@ -20,6 +20,23 @@
             <a href="#main" class="nav-login-button profile" id="nav-login-button">Профиль</a>
         </div>
     </nav>
+    <!-- Add ads -->
+    <div class="add-card-wrapper hide" id="add-card-menu">
+        <div class="add-card">
+            <div class="register-title-wrapper">
+                <h1 class="login-title">Создать объявление</h1>
+                <img src="./logo/close.svg" class="register-exit" id="add-exit">
+            </div>
+            <div class="register-form-wrapper">
+                <form action="" method="post" class="register-form">
+                    <input type="text" placeholder="Название книги" class="register-form-input" required>
+                    <input type="text" placeholder="Описание" class="register-form-input" required>
+                    <input type="text" placeholder="Автор книги" class="register-form-input">
+                    <button type="submit" class="register-form-input register-form-input-button">Создать</button>
+                </form>
+            </div>
+        </div>
+    </div>
     <!-- Search -->
     <section class="search-wrapper">
         <div class="search">
@@ -28,6 +45,7 @@
                 <input type="text" placeholder="Поиск:" class="search-title"></input>
                 <button type="submit" class="search-button"> </button>
             </form>
+            <p class="add-card-button" id="add-card-button">Создать объявление</p>
         </div>
     </section>
     <!-- Card with book -->

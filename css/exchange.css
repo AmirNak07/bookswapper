@@ -2,12 +2,12 @@
 
 body {
     background-image: url("../img/background.jpg");
+    background-repeat: repeat-y;
 }
 
 /* Nav */
 .nav {
     background-color: #5A2A27;
-    background-repeat: repeat-y;
 }
 
 .heading {
@@ -27,6 +27,8 @@ body {
 
 .search-wrapper {
     margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
 }
 
 .search {
@@ -37,13 +39,13 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin: 0 300px 0 100px;
+    width: 90%;
 }
 
 .search-title-books {
     color: #5A2A27;
     font-size: 35px;
-    margin: 0;
+    margin: 0 10px;
 }
 
 .search-form {
@@ -56,6 +58,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 30px;
+    margin: 0 10px;
 }
 
 ::placeholder {
@@ -77,6 +80,21 @@ body {
     border: none;
     background-color: #5C4742;
     cursor: pointer;
+}
+
+.add-card-button {
+    background-color: #5A2A27;
+    margin: 0 10px;
+    border-radius: 60px;
+    padding: 10px;
+    font-size: 20px;
+    width: 20%;
+    cursor: pointer;
+    text-align: center;
+}
+
+.register-form > ::placeholder {
+    color: #5A2A27;
 }
 
 /* Article (Card with books) */
@@ -168,4 +186,30 @@ body {
 
 .selected {
     background-color: #8D5B4C;
+}
+
+/* Add ads */
+
+.add-card-wrapper {
+    background-color: #5A2A277F;
+    min-height: 180%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+.add-card {
+    display: flex;
+    margin-top: 200px;
+    background-color: #FFFDED;
+    width: 85%;
+    border-radius: 45px;
+    flex-direction: column;
+    padding-top: 40px;
+    height: fit-content;
+}
+
+.register-form-input-button {
+    margin: 20px 0;
 }

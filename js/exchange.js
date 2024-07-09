@@ -25,3 +25,16 @@ select_page_third.onclick = function () {
     select_page_second.classList.remove("selected")
     select_page_third.classList.add("selected")
 }
+
+let close_add = document.getElementById("add-exit")
+let add_menu = document.getElementById("add-card-menu")
+
+close_add.onclick = function () {
+    add_menu.classList.add("hide")
+}
+
+let open_add_button = document.getElementById("add-card-button")
+
+open_add_button.onclick = function () {
+    add_menu.classList.remove("hide")
+}
