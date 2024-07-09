@@ -14,7 +14,7 @@
 
 <style scoped>
 header {
-  background-image: url("../../../public/img/header-book.jpeg");
+  background-image: url("../../assets/img/header-book.jpeg");
   background-size: cover;
   justify-content: center;
   padding-bottom: 120px;

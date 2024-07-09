@@ -2,12 +2,12 @@
 
 @font-face {
   font-family: "Montserrat-Regular";
-  src: url("public/fonts/Montserrat/static/Montserrat-Regular.ttf") format("truetype");
+  src: url("fonts/Montserrat/static/Montserrat-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Montserrat-SemiBold";
-  src: url("public/fonts/Montserrat/static/Montserrat-SemiBold.ttf");
+  src: url("fonts/Montserrat/static/Montserrat-SemiBold.ttf");
 }
 
 /* Стили тегов */
@@ -18,7 +18,7 @@ body {
   width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, input {
   margin: 0 auto;
   font-family: "Montserrat-SemiBold", sans-serif;
   color: #FFFDED;
@@ -33,4 +33,9 @@ p, a {
 
 a:hover {
   cursor: pointer;
+}
+
+.hide {
+  display: none;
+  visibility: hidden;
 }
