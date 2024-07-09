@@ -21,12 +21,10 @@ let second_question_text = document.getElementById("second-question-text")
 
 second_question_button.onclick = function () {
     if ((String(second_question_text.classList).includes("hide"))) {
-        console.log("тут")
         second_question_text.classList.add("open-window")
         second_question_text.classList.remove("close-window")
         second_question_text.classList.remove("hide")
     } else {
-        console.log("тута")
         second_question_text.classList.remove("open-window")
         second_question_text.classList.add("close-window")
         setTimeout(function () {
@@ -40,12 +38,10 @@ let third_question_text = document.getElementById("third-question-text")
 
 third_question_button.onclick = function () {
     if ((String(third_question_text.classList).includes("hide"))) {
-        console.log("тут")
         third_question_text.classList.add("open-window")
         third_question_text.classList.remove("close-window")
         third_question_text.classList.remove("hide")
     } else {
-        console.log("тута")
         third_question_text.classList.remove("open-window")
         third_question_text.classList.add("close-window")
         setTimeout(function () {
