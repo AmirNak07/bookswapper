@@ -1,0 +1,120 @@
+body {
+    background-color: #8D5B4C;
+}
+
+/* Nav */
+.nav {
+    background-color: #5A2A27;
+    background-repeat: repeat-y;
+}
+
+.heading {
+    color: #FFFDED;
+}
+
+.ads {
+    color: #FFFDED;
+}
+
+.profile {
+    background-color: #FFFDED;
+    color: #5A2A27;
+}
+
+/* Exit */
+
+.book-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.exit {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 175px 0 50px 3%;
+    cursor: pointer;
+}
+
+.exit-logo {
+    margin: 0 10px;
+}
+
+.exit-text{
+    margin: 0 10px;
+}
+
+.book-info-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.book-info {
+    background-color: #5A2A27;
+    width: 95%;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.book-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.book-name {
+    margin: 0;
+    font-size: 40px;
+}
+
+.book-author {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 300;
+    align-content: center;
+}
+
+.book-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.book-description {
+    width: 80%;
+    margin: 0;
+}
+
+.book-add-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.book-creator {
+    margin: 0;
+}
+
+.book-date {
+    margin: 0;
+}
+
+.phone-number {
+    margin: 50px 0 50px 3%;
+    background-color: #5A2A27;
+    border-radius: 20px;
+    padding: 20px;
+    width: 35%;
+}
+
+.pushReleaseTo { animation-name: pushReleaseTo }
+@keyframes pushReleaseTo {
+    30% { transform: scale(.5, .5) }
+    to {
+        transform: scale(5, 5);
+        opacity: 0;
+    }
+}
