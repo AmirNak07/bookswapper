@@ -7,19 +7,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <!--
-  <div class="login-wrapper">
-  </div>
-  -->
   <div class="login">
     <div class="login-title-wrapper">
       <h1 class="login-title">Вход</h1>
-      <RouterLink to="/" class="login-exit">
-        <VIcon class="login-exit-icon" icon="mdi-home"></VIcon>
-        <!--
-        <img src="../../assets/icons/close.svg" alt="">
-        -->
-      </RouterLink>
     </div>
     <div class="login-form-wrapper">
       <form action="/api/register" method="post" class="login-form">
@@ -33,20 +23,11 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.login-wrapper {
-  background-color: #5A2A277F;
-  min-height: 540%;
-  width: 100%;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-}
-
 .login {
   display: flex;
-  margin-top: 200px;
+  margin-top: 5%;
   background-color: #FFFDED;
-  width: 85%;
+  width: 65%;
   border-radius: 45px;
   flex-direction: column;
   padding-top: 40px;
@@ -64,18 +45,6 @@ onMounted(() => {
   font-size: 45px;
   align-self: center;
   padding-left: 80px;
-}
-
-.login-exit {
-  background: #5A2A27;
-  margin: 50px;
-  padding-right: 50px;
-  cursor: pointer;
-}
-
-.login-exit-icon {
-  color: #FFFFFF;
-  font-size: 60px;
 }
 
 .login-form-wrapper {

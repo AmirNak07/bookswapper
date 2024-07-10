@@ -4,7 +4,7 @@ import LoginComponent from '@/components/LoginView/LoginComponent.vue'
 </script>
 
 <template class="page">
-  <img src="../assets/img/header-book.jpeg" alt="background" width="100%" height="100%">
+  <img src="../assets/img/header-book.jpeg" alt="background" width="100%" height="80%">
   <LoginComponent class="container"/>
 </template>
 
