@@ -7,15 +7,36 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        
+      - name: Shorten Commit Hash
+        id: short_hash
+        run: echo "HASH=${GITHUB_SHA:0:7}" >> "$GITHUB_OUTPUT"
 
       - name: Setup bun
         uses: oven-sh/setup-bun@v1
         with:
           bun-version: latest
+          
+      - name: Create an archive
+        run: tar -czvf release.tar.gz -C dist .
+
+      - name: Publish Release
+        id: publish_release
+        uses: softprops/action-gh-release@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          files: release.tar.gz
+          tag_name: ${{ steps.short_hash.outputs.HASH }}
+          release_name: Release ${{ steps.short_hash.outputs.HASH }}
+          body: Release for commit ${{ steps.short_hash.outputs.HASH }}
 
       - name: Build and install deps
         run: bun install && bun run build
