@@ -1,4 +1,4 @@
-name: release.yml
+name: Build and deploy new release
 on:
   push:
     branches:
