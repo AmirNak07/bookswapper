@@ -23,7 +23,10 @@ jobs:
         uses: oven-sh/setup-bun@v1
         with:
           bun-version: latest
-          
+
+      - name: Build and install deps
+        run: bun install && bun run build
+        
       - name: Create an archive
         run: tar -czvf release.tar.gz -C dist .
 
@@ -37,9 +40,6 @@ jobs:
           tag_name: ${{ steps.short_hash.outputs.HASH }}
           release_name: Release ${{ steps.short_hash.outputs.HASH }}
           body: Release for commit ${{ steps.short_hash.outputs.HASH }}
-
-      - name: Build and install deps
-        run: bun install && bun run build
 
       - name: Delete old version
         uses: appleboy/ssh-action@v1.0.3
