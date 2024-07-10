@@ -14,9 +14,6 @@ onMounted(() => {
   <div class="register">
     <div class="register-title-wrapper">
       <h1 class="register-title">Регистрация</h1>
-      <RouterLink to="/">
-        <img src="../../assets/icons/close.svg" alt="" class="register-exit">
-      </RouterLink>
     </div>
     <div class="register-form-wrapper">
       <form action="" method="post" class="register-form">
@@ -31,7 +28,7 @@ onMounted(() => {
           <option value="Санкт-Петербург"></option>
           <option value="Казань"></option>
         </datalist>
-        <button type="submit" class="register-form-input register-form-input-button">Создать</button>
+        <input type="submit" value="Зарегистрироваться" class="register-form-input register-form-input-button">
       </form>
       <RouterLink class="go-to-login" to="/login">Авторизация</RouterLink>
     </div>
@@ -39,17 +36,9 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.register-wrapper {
-  background-color: #5A2A277F;
-  min-height: 540%;
-  width: 100%;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-}
-
 .register {
   display: flex;
+  margin-top: 5%;
   background-color: #FFFDED;
   width: 80%;
   border-radius: 45px;
@@ -71,11 +60,6 @@ onMounted(() => {
   padding-left: 80px;
 }
 
-.register-exit {
-  padding-right: 50px;
-  cursor: pointer;
-}
-
 .register-form-wrapper {
   display: flex;
   flex-direction: column;
@@ -93,7 +77,7 @@ onMounted(() => {
 .register-form-input {
   margin-top: 20px;
   margin-bottom: 20px;
-  padding: 20px 0 20px 25px;
+  padding: 20px 25px 20px 25px;
   width: 80%;
   border-radius: 15px;
   border: 3px solid #5A2A27;
@@ -109,7 +93,7 @@ onMounted(() => {
   color: #FFFDED;
   border: none;
   padding: 20px 30px;
-  width: 20%;
+  width: 60%;
   cursor: pointer;
 }
 

@@ -4,16 +4,21 @@
 <template>
   <nav class="nav">
     <div class="left-nav">
+      <!--
       <RouterLink to="/">
         <img src="../../assets/logo.png" alt="Логотип" class="logo">
         <h1 class="heading">КнигоБар</h1>
       </RouterLink>
+      -->
+      <RouterLink to="/" class="login-exit nav-button">
+        <VIcon class="login-exit-icon" icon="mdi-home"></VIcon>
+      </RouterLink>
     </div>
     <div class="right-nav">
-      <RouterLink to="/books" class="ads">
+      <RouterLink to="/books" class="nav-button">
         <VIcon class="login-exit-icon" icon="mdi-bookshelf"></VIcon>
       </RouterLink>
-      <RouterLink to="/login" class="nav-login-button">
+      <RouterLink to="/login" class="nav-button">
         <VIcon class="login-exit-icon" icon="mdi-account"></VIcon>
       </RouterLink>
     </div>
@@ -57,26 +62,11 @@
   align-items: center;
 }
 
-.logo {
-  height: 110px;
-  padding-left: 20px;
-}
-
-.heading {
-  color: #5A2A27;
-  font-size: 30px;
-  margin: 0;
-}
-
-.nav-login-button {
-  margin: 0 50px;
+.nav-button {
+  margin: 20px;
   background-color: #5A2A27;
   padding: 20px 50px;
   color: #FFFDED;
   border-radius: 120px;
-}
-
-.ads {
-  color: #5A2A27;
 }
 </style>
