@@ -1,9 +1,25 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
+import { ApiClient } from '@/api/client'
+import { LoginRequest } from '@/api/models/login'
 
 onMounted(() => {
   window.scrollTo({top: 0, behavior: 'smooth'});
 })
+
+const loginInput = ref<HTMLInputElement | null>(null);
+const passwordInput = ref<HTMLInputElement | null>(null);
+
+async function login() {
+  const loginData = loginInput.value?.value;
+  const passwordData = passwordInput.value?.value;
+  if (loginData != undefined && passwordData != undefined) {
+    const data = new LoginRequest(loginData, passwordData);
+    const apiClient = new ApiClient();
+    const response = await apiClient.login(data);
+    alert(JSON.stringify(response))
+  }
+}
 </script>
 
 <template>
@@ -12,9 +28,9 @@ onMounted(() => {
       <h1 class="login-title">Вход</h1>
     </div>
     <div class="login-form-wrapper">
-      <form action="/api/register" method="post" class="login-form">
-        <input name="login" type="text" placeholder="Логин" class="login-form-input">
-        <input name="password" type="password" placeholder="Пароль" class="login-form-input">
+      <form action="/api/register" method="post" class="login-form" @submit.prevent="login">
+        <input name="login" type="text" placeholder="Логин" class="login-form-input" ref="loginInput">
+        <input name="password" type="password" placeholder="Пароль" class="login-form-input" ref="passwordInput">
         <input type="submit" value="Войти" class="login-form-input login-form-input-button">
       </form>
       <RouterLink to="/register" class="go-to-register">Нет аккаунта? <span class="go-register">Регистрация</span></RouterLink>

@@ -13,9 +13,6 @@
       <RouterLink to="/" class="nav-button">
         <VIcon icon="mdi-home"></VIcon>
       </RouterLink>
-      <RouterLink to="/status" class="nav-button">
-        <VIcon icon="mdi-test-tube"></VIcon>
-      </RouterLink>
     </div>
     <div class="right-nav">
       <RouterLink to="/books" class="nav-button">

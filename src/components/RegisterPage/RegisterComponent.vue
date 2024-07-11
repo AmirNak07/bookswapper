@@ -2,8 +2,6 @@
 import { onMounted, ref } from 'vue'
 import { ApiClient } from '@/api/client'
 import { RegisterRequest } from '@/api/models/register'
-import { ApiError, ApiResponse } from '@/api/models/response'
-import 'axios'
 
 onMounted(() => {
   window.scrollTo({top: 0, behavior: 'smooth'});
@@ -13,18 +11,15 @@ const loginInput = ref<HTMLInputElement | null>(null);
 const passwordInput = ref<HTMLInputElement | null>(null);
 const usernameInput = ref<HTMLInputElement | null>(null);
 
-const register = async () => {
+async function register() {
   const loginData = loginInput.value?.value;
   const passwordData = passwordInput.value?.value;
   const usernameData = usernameInput.value?.value;
   if (loginData != undefined && passwordData != undefined && usernameData != undefined) {
     const data = new RegisterRequest(loginData, passwordData, usernameData);
     const apiClient = new ApiClient();
-    const result = await apiClient.Register(data);
-    
-    if (typeof result == typeof ApiError) {
-      
-    }
+    const response = await apiClient.register(data);
+    alert(JSON.stringify(response))
   }
 }
 </script>
@@ -39,7 +34,7 @@ const register = async () => {
       <h1 class="register-title">Регистрация</h1>
     </div>
     <div class="register-form-wrapper">
-      <form class="register-form">
+      <form class="register-form" @submit.prevent="register">
         <input type="text" placeholder="Логин" class="register-form-input" required ref="loginInput">
         <input type="password" placeholder="Пароль" class="register-form-input" required ref="passwordInput">
         <input type="text" placeholder="Отображаемое имя" class="register-form-input" required ref="usernameInput">
@@ -53,7 +48,7 @@ const register = async () => {
           <option value="Казань"></option>
         </datalist>
         -->
-        <button class="register-form-input register-form-input-button" @click="register">
+        <button class="register-form-input register-form-input-button">
           Зарегистрироваться
         </button>
       </form>
@@ -124,9 +119,11 @@ const register = async () => {
   cursor: pointer;
 }
 
+/*
 .change-city {
   width: 85%;
 }
+*/
 
 .go-to-login {
   color: #5A2A27;
