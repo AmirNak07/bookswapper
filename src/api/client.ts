@@ -1,10 +1,10 @@
 import type { RegisterRequest } from '@/api/models/register'
-import type { ApiError } from '@/api/models/response'
 import type { LoginRequest, LoginResponse } from '@/api/models/login'
 import type { UserResponse } from '@/api/models/user'
-import { ApiResponse } from '@/api/models/response'
-import type { AxiosError, AxiosInstance } from 'axios'
+import type { ApiResponse } from '@/api/models/response'
+import type { AxiosInstance } from 'axios'
 import axios from 'axios'
+import type { CityResponse } from '@/api/models/city'
 
 export class ApiClient {
   baseURL: string = 'https://bs-api.linuxfight.me/api'
@@ -33,32 +33,54 @@ export class ApiClient {
     return response.data
   }
   
-  public async register(data: RegisterRequest): Promise<ApiResponse | ApiError> {
-    const response = this.axios.post('/auth/register', data)
+  public async register(data: RegisterRequest): Promise<ApiResponse> {
+    const response = await this.axios.post<ApiResponse>('/auth/register', data)
+    return response.data
+  }
+
+  public async login(data: LoginRequest): Promise<LoginResponse> {
+    const response = await this.axios.post<LoginResponse>('/auth/login', data)
+    return response.data
+  }
+
+  public async GetMe(): Promise<UserResponse> {
+    const response = await this.axios.get<UserResponse>('/profiles/me')
+    return response.data
+  }
+  
+  public async GetCities(): Promise<CityResponse> {
+    const response = await this.axios.get<CityResponse>('/utils/allcities')
+    return response.data
+  }
+  
+  /*
+  public async register(data: RegisterRequest): Promise<ApiResponse | AxiosError> {
+    const response = this.axios.post<ApiResponse>('/auth/register', data)
     return await response.then(data => {
-      return data.data as ApiResponse
+      return data.data
     }).catch((err: AxiosError) => {
-      return err.response?.data as ApiError
+      return err
     })
   }
 
-  public async login(data: LoginRequest): Promise<LoginResponse | ApiError> {
-    const response = this.axios.post('/auth/login', data)
+  public async login(data: LoginRequest): Promise<LoginResponse | AxiosError> {
+    const response = this.axios.post<LoginResponse>('/auth/login', data)
 
     return await response.then(data => {
-      return data.data as LoginResponse
+      return data.data
     }).catch((err: AxiosError) => {
-      return err.response?.data as ApiError
+      return err
     })
   }
 
-  public async GetMe(): Promise<UserResponse | ApiError> {
-    const response = this.axios.get('/profiles/me')
+  public async GetMe(): Promise<UserResponse | AxiosError> {
+    const response = this.axios.get<UserResponse>('/profiles/me')
 
     return await response.then(data => {
-      return data.data as UserResponse
+      return data.data
     }).catch((err: AxiosError) => {
-      return err.response?.data as ApiError
+      return err
     })
   }
+  */
 }

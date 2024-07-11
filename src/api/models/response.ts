@@ -1,4 +1,4 @@
-export class ApiError {
+export class ApiResponse {
   status: string
   
   constructor(status: string) {
@@ -6,7 +6,7 @@ export class ApiError {
   }
 }
 
-export class ApiResponse {
+export class ApiError {
   status: string
   
   constructor(status: string) {

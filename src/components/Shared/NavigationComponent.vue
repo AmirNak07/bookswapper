@@ -19,7 +19,7 @@
         <VIcon icon="mdi-bookshelf"></VIcon>
       </RouterLink>
       <RouterLink to="/login" class="nav-button">
-        <VIcon icon="mdi-account"></VIcon>
+        <VIcon icon="mdi-login"></VIcon>
       </RouterLink>
     </div>
   </nav>
@@ -29,12 +29,11 @@
 .nav {
   position: fixed;
   left: 0;
-  top: -250px;
   right: 0;
   bottom: auto;
   background-color: #9e6c68;
   border-radius: 120px;
-  height: 110px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;

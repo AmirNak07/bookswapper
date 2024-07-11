@@ -44,7 +44,7 @@ defineProps<{
   <div class="faq-question" @click="QuestionInteract">
     <div class="faq-question-title-container">
       <p class="faq-question-title-text">{{question}}</p>
-      <img src="/src/assets/icons/checkmark.svg" alt="" ref="questionCheckmark" class="faq-question-checkmark">
+      <img src="/src/assets/svg/checkmark.svg" alt="" ref="questionCheckmark" class="faq-question-checkmark">
     </div>
     <p ref="questionAnswer" class="hide">{{answer}}</p>
   </div>

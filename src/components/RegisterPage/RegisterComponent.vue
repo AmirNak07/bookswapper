@@ -1,25 +1,39 @@
-<script setup lang="ts">
+<script async setup lang="ts">
 import { onMounted, ref } from 'vue'
 import { ApiClient } from '@/api/client'
 import { RegisterRequest } from '@/api/models/register'
+import { LoginRequest } from '@/api/models/login'
+import { useStore } from '@/stores/token'
 
 onMounted(() => {
   window.scrollTo({top: 0, behavior: 'smooth'});
 })
 
+const store = useStore();
+const apiClient = new ApiClient();
 const loginInput = ref<HTMLInputElement | null>(null);
 const passwordInput = ref<HTMLInputElement | null>(null);
 const usernameInput = ref<HTMLInputElement | null>(null);
+const cityInput = ref<HTMLInputElement | null>(null);
+const cityResponse = await apiClient.GetCities();
 
 async function register() {
   const loginData = loginInput.value?.value;
   const passwordData = passwordInput.value?.value;
   const usernameData = usernameInput.value?.value;
+  const cityData = cityInput.value;
+  alert(cityData)
   if (loginData != undefined && passwordData != undefined && usernameData != undefined) {
     const data = new RegisterRequest(loginData, passwordData, usernameData);
-    const apiClient = new ApiClient();
     const response = await apiClient.register(data);
     alert(JSON.stringify(response))
+    const tokenResponse = await apiClient.login(new LoginRequest(loginData, passwordData));
+    apiClient.setToken(tokenResponse.token);
+    store.updateSettings(tokenResponse.token);
+    const profile = await apiClient.GetMe();
+    alert(JSON.stringify(profile))
+  } else {
+    alert('Поля заполнены неправильно')
   }
 }
 </script>
@@ -38,15 +52,13 @@ async function register() {
         <input type="text" placeholder="Логин" class="register-form-input" required ref="loginInput">
         <input type="password" placeholder="Пароль" class="register-form-input" required ref="passwordInput">
         <input type="text" placeholder="Отображаемое имя" class="register-form-input" required ref="usernameInput">
+        <datalist id="cities">
+          <option v-for="item in cityResponse.data.cities" :value="item.city" :key="item.id"></option>
+        </datalist>
+        <input list="cities" placeholder="Город" class="register-form-input" required ref="cityInput">
         <!--
         <input type="tel" placeholder="Номер телефона" class="register-form-input" required>
-        <input list="cities" placeholder="Город" class="register-form-input" required>
-        <datalist id="cities">
-           Надо брать данные из js(у меня не вышло)
-          <option value="Москва"></option>
-          <option value="Санкт-Петербург"></option>
-          <option value="Казань"></option>
-        </datalist>
+        
         -->
         <button class="register-form-input register-form-input-button">
           Зарегистрироваться
@@ -115,7 +127,7 @@ async function register() {
   color: #FFFDED;
   border: none;
   padding: 20px 30px;
-  width: 60%;
+  width: 80%;
   cursor: pointer;
 }
 

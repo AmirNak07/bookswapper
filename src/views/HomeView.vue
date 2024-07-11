@@ -12,7 +12,7 @@ import HeaderComponent from '@/components/MainPage/HeaderComponent.vue'
   <main>
     <AsideComponent/>
     <JoinComponent/>
-    <FaqComponent/>
+    <FaqComponent id="faq"/>
   </main>
   <FooterComponent/>
 </template>

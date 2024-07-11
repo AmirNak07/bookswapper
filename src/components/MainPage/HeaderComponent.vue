@@ -1,5 +1,7 @@
 <script setup lang="ts">
-
+function scroll() {
+  document.querySelector('#faq')?.scrollIntoView({behavior: 'smooth'});
+}
 </script>
 
 <template>
@@ -7,7 +9,7 @@
     <div class="header-wrapper">
       <h1 class="header-title">КнигоБар</h1>
       <p class="header-text">Погрузитесь в мир книг с КнигоБаром - местом, где слова оживают и приключения начинаются!</p>
-      <a href="#" class="button-more">Узнать больше</a>
+      <a @click="scroll" class="button-more">Узнать больше</a>
     </div>
   </header>
 </template>

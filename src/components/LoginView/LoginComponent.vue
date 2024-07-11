@@ -2,11 +2,13 @@
 import { onMounted, ref } from 'vue'
 import { ApiClient } from '@/api/client'
 import { LoginRequest } from '@/api/models/login'
+import { useStore } from '@/stores/token'
 
 onMounted(() => {
   window.scrollTo({top: 0, behavior: 'smooth'});
 })
 
+const store = useStore();
 const loginInput = ref<HTMLInputElement | null>(null);
 const passwordInput = ref<HTMLInputElement | null>(null);
 
@@ -18,6 +20,10 @@ async function login() {
     const apiClient = new ApiClient();
     const response = await apiClient.login(data);
     alert(JSON.stringify(response))
+    apiClient.setToken(response.token);
+    store.updateSettings(response.token);
+    const profile = await apiClient.GetMe();
+    alert(JSON.stringify(profile))
   }
 }
 </script>
@@ -43,7 +49,7 @@ async function login() {
   display: flex;
   margin-top: 5%;
   background-color: #FFFDED;
-  width: 65%;
+  width: 80%;
   border-radius: 45px;
   flex-direction: column;
   padding-top: 40px;
@@ -60,7 +66,6 @@ async function login() {
   color: #000000;
   font-size: 45px;
   align-self: center;
-  padding-left: 80px;
 }
 
 .login-form-wrapper {
@@ -102,7 +107,7 @@ async function login() {
   color: #FFFDED;
   border: none;
   padding: 20px 30px;
-  width: 20%;
+  width: 80%;
   cursor: pointer;
 }
 
