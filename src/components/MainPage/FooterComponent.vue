@@ -6,7 +6,7 @@
   <footer class="footer">
     <div class="footer-wrapper">
       <h1 class="footer-title">©КнигоБар</h1>
-      <img src="../../assets/logo.png" alt="Логотип" class="footer-logo">
+      <img src="/logo.png" alt="Логотип" class="footer-logo">
     </div>
   </footer>
 </template>
