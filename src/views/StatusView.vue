@@ -3,7 +3,7 @@ import { ApiClient } from '@/api/client'
 
 const apiClient = new ApiClient();
 
-const status = await apiClient.Ping();
+//const status = await apiClient.Ping();
 
 function getEnvironment(): string {
   if (import.meta.env !== undefined) {
