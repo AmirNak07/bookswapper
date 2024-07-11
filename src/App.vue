@@ -4,7 +4,18 @@ import NavigationComponent from '@/components/Shared/NavigationComponent.vue'
 </script>
 
 <template>
-  <RouterView />
+  <RouterView v-slot="{ Component }">
+    <template v-if="Component">
+      <KeepAlive>
+        <Suspense>
+          <component :is="Component"/>
+          <template #fallback>
+            loading...
+          </template>
+        </Suspense>
+      </KeepAlive>
+    </template>
+  </RouterView>
   <NavigationComponent/>
 </template>
 

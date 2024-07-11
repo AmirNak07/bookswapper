@@ -1,9 +1,32 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
+import { ApiClient } from '@/api/client'
+import { RegisterRequest } from '@/api/models/register'
+import { ApiError, ApiResponse } from '@/api/models/response'
+import 'axios'
 
 onMounted(() => {
   window.scrollTo({top: 0, behavior: 'smooth'});
 })
+
+const loginInput = ref<HTMLInputElement | null>(null);
+const passwordInput = ref<HTMLInputElement | null>(null);
+const usernameInput = ref<HTMLInputElement | null>(null);
+
+const register = async () => {
+  const loginData = loginInput.value?.value;
+  const passwordData = passwordInput.value?.value;
+  const usernameData = usernameInput.value?.value;
+  if (loginData != undefined && passwordData != undefined && usernameData != undefined) {
+    const data = new RegisterRequest(loginData, passwordData, usernameData);
+    const apiClient = new ApiClient();
+    const result = await apiClient.Register(data);
+    
+    if (typeof result == typeof ApiError) {
+      
+    }
+  }
+}
 </script>
 
 <template>
@@ -16,19 +39,23 @@ onMounted(() => {
       <h1 class="register-title">Регистрация</h1>
     </div>
     <div class="register-form-wrapper">
-      <form action="" method="post" class="register-form">
-        <input type="text" placeholder="Логин" class="register-form-input" required>
-        <input type="password" placeholder="Пароль" class="register-form-input" required>
-        <input type="text" placeholder="Отображаемое имя" class="register-form-input">
+      <form class="register-form">
+        <input type="text" placeholder="Логин" class="register-form-input" required ref="loginInput">
+        <input type="password" placeholder="Пароль" class="register-form-input" required ref="passwordInput">
+        <input type="text" placeholder="Отображаемое имя" class="register-form-input" required ref="usernameInput">
+        <!--
         <input type="tel" placeholder="Номер телефона" class="register-form-input" required>
         <input list="cities" placeholder="Город" class="register-form-input" required>
         <datalist id="cities">
-          <!-- Надо брать данные из js(у меня не вышло) -->
+           Надо брать данные из js(у меня не вышло)
           <option value="Москва"></option>
           <option value="Санкт-Петербург"></option>
           <option value="Казань"></option>
         </datalist>
-        <input type="submit" value="Зарегистрироваться" class="register-form-input register-form-input-button">
+        -->
+        <button class="register-form-input register-form-input-button" @click="register">
+          Зарегистрироваться
+        </button>
       </form>
       <RouterLink class="go-to-login" to="/login">Авторизация</RouterLink>
     </div>

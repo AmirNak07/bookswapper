@@ -12,5 +12,13 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  }
+  },
+  server: {
+    proxy: {
+      '^/api/.*': {
+        target: 'https://bs-api.linuxfight.me',
+        changeOrigin: true
+      }
+    }
+  },
 })
