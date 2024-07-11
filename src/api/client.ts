@@ -7,11 +7,13 @@ import type { AxiosError, AxiosInstance } from 'axios'
 import axios from 'axios'
 
 export class ApiClient {
-  baseURL: string
+  baseURL: string = 'https://bs-api.linuxfight.me/api'
   axios: AxiosInstance
 
-  constructor(baseURL: string = 'http://localhost:5173/api') { // 'https://bs-api.linuxfight.me/api'
-    this.baseURL = baseURL
+  constructor() {
+    if (import.meta.env.DEV) {
+      this.baseURL = 'http://localhost:5173/api'
+    }
     this.axios = axios.create({
       baseURL: this.baseURL
     })
