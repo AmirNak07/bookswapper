@@ -14,7 +14,9 @@ function getEnvironment(): string {
 </script>
 
 <template>
+  <!--
   Status: {{status}}
+  -->
   
   Environment: {{getEnvironment()}}
 </template>
