@@ -39,7 +39,7 @@ async function register() {
     }
     apiClient.setToken(tokenResponse.token);
     store.updateSettings(tokenResponse.token);
-    await router.push('/profile')
+    await router.push('/')
   } else {
     alert('Поля заполнены неправильно')
   }

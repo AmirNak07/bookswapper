@@ -86,6 +86,19 @@ export class ApiClient {
     }
   }
   
+  public async GetUser(userId: number): Promise<UserResponse | string> {
+    try {
+      const response = await this.axios.get<UserResponse>('/profiles/user?userId=' + userId)
+      return response.data
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        return JSON.stringify(error.response?.data);
+      } else {
+        return JSON.stringify(error);
+      }
+    }
+  }
+  
   public async AddTrade(data: TradeRequest): Promise<ApiResponse | string> {
     try {
       const response = await this.axios.post<ApiResponse>('/trade', data)

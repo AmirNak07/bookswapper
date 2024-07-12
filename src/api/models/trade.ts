@@ -2,8 +2,8 @@ export interface Trade {
   id: string
   bookname: string
   description: string
-  author_id: string
-  author_name: string
+  Author_id: string
+  Author_name: string
 }
 
 export interface TradeData {

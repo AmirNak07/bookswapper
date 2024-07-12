@@ -1,11 +1,20 @@
 <script async setup lang="ts">
 import { ApiClient } from '@/api/client'
 import { useStore } from '@/stores/token'
+import { useRoute } from 'vue-router'
+import router from '@/router'
 
 const apiClient = new ApiClient();
 const store = useStore();
+const route = useRoute();
+const params = route.query;
+const idParameter = params.id;
 apiClient.setToken(store.settings.token);
-const profile = await apiClient.GetMe();
+if (typeof idParameter !== 'string') {
+  router.back();
+}
+const profile = await apiClient.GetUser(parseInt(<string>idParameter))
+
 </script>
 
 <template>

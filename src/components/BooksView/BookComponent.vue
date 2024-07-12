@@ -3,6 +3,7 @@ defineProps<{
   title: string
   text: string
   creator: string
+  creatorId: string
 }>()
 </script>
 
@@ -12,9 +13,11 @@ defineProps<{
       <h2 class="card-title">{{title}}</h2>
     </div>
     <p class="card-text">{{text}}</p>
-    <div class="card-footer">
-      <p class="card-creator">{{creator}}</p>
-    </div>
+    <RouterLink :to="'/profile?id=' + creatorId">
+      <p>
+        Опубликовал: {{creator}}
+      </p>
+    </RouterLink>
   </article>
 </template>
 
@@ -64,6 +67,7 @@ defineProps<{
 }
 
 .card-creator {
+  color: black;
   font-size: 20px;
   margin: 0;
 }

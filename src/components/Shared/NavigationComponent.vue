@@ -32,7 +32,7 @@ function logOut(): void {
       <RouterLink to="/login" class="nav-button" v-if="!loggedIn()">
         <VIcon icon="mdi-login"></VIcon>
       </RouterLink>
-      <RouterLink to="/profile" class="nav-button" v-if="loggedIn()">
+      <RouterLink to="/profile/me" class="nav-button" v-if="loggedIn()">
         <VIcon icon="mdi-account"></VIcon>
       </RouterLink>
       <RouterLink to="/" class="nav-button" v-if="loggedIn()" @click="logOut()">

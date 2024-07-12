@@ -32,8 +32,9 @@ const books = await apiClient.GetTrades();
           <!-- Каждый новый card создаётся из данных с БД -->
           <ul v-if="typeof books !== 'string'">
             <BookComponent :key="book.id" v-for="book in books.data.trades" :title="book.bookname"
-                           :creator="book.author_name"
-                           :text="book.description"/>
+                           :creator="book.Author_name"
+                           :text="book.description" 
+                           :creator-id="book.Author_id"/>
           </ul>
         </div>
       </div>
