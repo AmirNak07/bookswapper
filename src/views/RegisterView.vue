@@ -5,7 +5,7 @@ import RegisterComponent from '@/components/RegisterPage/RegisterComponent.vue'
 
 <template>
   <div class="background">
-    <RegisterComponent style="margin-bottom: 5%"/>
+    <RegisterComponent class="container"/>
   </div>
 </template>
 

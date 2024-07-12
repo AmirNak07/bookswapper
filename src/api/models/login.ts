@@ -8,10 +8,6 @@ export class LoginRequest {
   }
 }
 
-export class LoginResponse {
+export interface LoginResponse {
   token: string
-  
-  constructor(token: string) {
-    this.token = token
-  }
 }

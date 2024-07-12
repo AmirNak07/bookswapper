@@ -1,15 +1,7 @@
-export class ApiResponse {
+export interface ApiResponse {
   status: string
-  
-  constructor(status: string) {
-    this.status = status
-  }
 }
 
-export class ApiError {
+export interface ApiError {
   status: string
-  
-  constructor(status: string) {
-    this.status = status
-  }
 }

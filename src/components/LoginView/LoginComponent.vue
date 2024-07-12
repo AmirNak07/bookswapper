@@ -3,6 +3,7 @@ import { onMounted, ref } from 'vue'
 import { ApiClient } from '@/api/client'
 import { LoginRequest } from '@/api/models/login'
 import { useStore } from '@/stores/token'
+import router from '@/router'
 
 onMounted(() => {
   window.scrollTo({top: 0, behavior: 'smooth'});
@@ -19,11 +20,13 @@ async function login() {
     const data = new LoginRequest(loginData, passwordData);
     const apiClient = new ApiClient();
     const response = await apiClient.login(data);
-    alert(JSON.stringify(response))
+    if (typeof response === 'string') {
+      alert(JSON.stringify(response))
+      return
+    }
     apiClient.setToken(response.token);
     store.updateSettings(response.token);
-    const profile = await apiClient.GetMe();
-    alert(JSON.stringify(profile))
+    await router.push('/profile')
   }
 }
 </script>

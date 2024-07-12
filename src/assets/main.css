@@ -48,3 +48,7 @@ a:hover {
   justify-content: center;
   align-items: center;
 }
+
+.container {
+  margin: 10%;
+}

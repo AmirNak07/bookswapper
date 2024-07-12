@@ -1,10 +1,11 @@
 import type { RegisterRequest } from '@/api/models/register'
 import type { LoginRequest, LoginResponse } from '@/api/models/login'
 import type { UserResponse } from '@/api/models/user'
-import type { ApiResponse } from '@/api/models/response'
+import { type ApiResponse } from '@/api/models/response'
 import type { AxiosInstance } from 'axios'
 import axios from 'axios'
 import type { CityResponse } from '@/api/models/city'
+import { TradeRequest, type TradeResponse } from '@/api/models/trade'
 
 export class ApiClient {
   baseURL: string = 'https://bs-api.linuxfight.me/api'
@@ -33,19 +34,69 @@ export class ApiClient {
     return response.data
   }
   
-  public async register(data: RegisterRequest): Promise<ApiResponse> {
-    const response = await this.axios.post<ApiResponse>('/auth/register', data)
-    return response.data
+  public async register(data: RegisterRequest): Promise<ApiResponse | string> {
+    try {
+      const response = await this.axios.post<ApiResponse>('/auth/register', data)
+      return response.data
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        return JSON.stringify(error.response?.data);
+      } else {
+        return JSON.stringify(error);
+      }
+    }
   }
 
-  public async login(data: LoginRequest): Promise<LoginResponse> {
-    const response = await this.axios.post<LoginResponse>('/auth/login', data)
-    return response.data
+  public async login(data: LoginRequest): Promise<LoginResponse | string> {
+    try {
+      const response = await this.axios.post<LoginResponse>('/auth/login', data)
+      return response.data 
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        return JSON.stringify(error.response?.data);
+      } else {
+        return JSON.stringify(error);
+      }
+    }
   }
 
-  public async GetMe(): Promise<UserResponse> {
-    const response = await this.axios.get<UserResponse>('/profiles/me')
-    return response.data
+  public async GetMe(): Promise<UserResponse | string> {
+    try {
+      const response = await this.axios.get<UserResponse>('/profiles/me')
+      return response.data
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        return JSON.stringify(error.response?.data);
+      } else {
+        return JSON.stringify(error);
+      }
+    }
+  }
+
+  public async GetTrades(): Promise<TradeResponse | string> {
+    try {
+      const response = await this.axios.get<TradeResponse>('/trades')
+      return response.data
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        return JSON.stringify(error.response?.data);
+      } else {
+        return JSON.stringify(error);
+      }
+    }
+  }
+  
+  public async AddTrade(data: TradeRequest): Promise<ApiResponse | string> {
+    try {
+      const response = await this.axios.post<ApiResponse>('/trade', data)
+      return response.data
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        return JSON.stringify(error.response?.data);
+      } else {
+        return JSON.stringify(error);
+      }
+    }
   }
   
   public async GetCities(): Promise<CityResponse> {

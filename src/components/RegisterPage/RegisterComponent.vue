@@ -4,6 +4,7 @@ import { ApiClient } from '@/api/client'
 import { RegisterRequest } from '@/api/models/register'
 import { LoginRequest } from '@/api/models/login'
 import { useStore } from '@/stores/token'
+import router from '@/router'
 
 onMounted(() => {
   window.scrollTo({top: 0, behavior: 'smooth'});
@@ -21,17 +22,24 @@ async function register() {
   const loginData = loginInput.value?.value;
   const passwordData = passwordInput.value?.value;
   const usernameData = usernameInput.value?.value;
-  const cityData = cityInput.value;
-  alert(cityData)
-  if (loginData != undefined && passwordData != undefined && usernameData != undefined) {
-    const data = new RegisterRequest(loginData, passwordData, usernameData);
+  const cityData = cityInput.value?.value;
+  const city = cityResponse.data?.cities.find((i) => i.city === cityData);
+  
+  if (loginData != undefined && passwordData != undefined && usernameData != undefined && city != undefined) {
+    const data = new RegisterRequest(loginData, passwordData, usernameData, city.id);
     const response = await apiClient.register(data);
-    alert(JSON.stringify(response))
+    if (typeof response === 'string') {
+      alert(response)
+      return
+    }
     const tokenResponse = await apiClient.login(new LoginRequest(loginData, passwordData));
+    if (typeof tokenResponse === 'string') {
+      alert(JSON.stringify(tokenResponse))
+      return
+    }
     apiClient.setToken(tokenResponse.token);
     store.updateSettings(tokenResponse.token);
-    const profile = await apiClient.GetMe();
-    alert(JSON.stringify(profile))
+    await router.push('/profile')
   } else {
     alert('Поля заполнены неправильно')
   }
@@ -53,7 +61,7 @@ async function register() {
         <input type="password" placeholder="Пароль" class="register-form-input" required ref="passwordInput">
         <input type="text" placeholder="Отображаемое имя" class="register-form-input" required ref="usernameInput">
         <datalist id="cities">
-          <option v-for="item in cityResponse.data.cities" :value="item.city" :key="item.id"></option>
+          <option v-for="item in cityResponse.data.cities" :value="item.city" :key="item.id">{{item.id}}</option>
         </datalist>
         <input list="cities" placeholder="Город" class="register-form-input" required ref="cityInput">
         <!--

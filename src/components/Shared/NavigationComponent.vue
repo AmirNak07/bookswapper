@@ -1,4 +1,15 @@
 <script setup lang="ts">
+import { useStore } from '@/stores/token'
+
+const store = useStore();
+
+function loggedIn(): boolean {
+  return store.settings.token !== '';
+}
+
+function logOut(): void {
+  store.updateSettings('')
+}
 </script>
 
 <template>
@@ -18,8 +29,14 @@
       <RouterLink to="/books" class="nav-button">
         <VIcon icon="mdi-bookshelf"></VIcon>
       </RouterLink>
-      <RouterLink to="/login" class="nav-button">
+      <RouterLink to="/login" class="nav-button" v-if="!loggedIn()">
         <VIcon icon="mdi-login"></VIcon>
+      </RouterLink>
+      <RouterLink to="/profile" class="nav-button" v-if="loggedIn()">
+        <VIcon icon="mdi-account"></VIcon>
+      </RouterLink>
+      <RouterLink to="/" class="nav-button" v-if="loggedIn()" @click="logOut()">
+        <VIcon icon="mdi-logout"></VIcon>
       </RouterLink>
     </div>
   </nav>

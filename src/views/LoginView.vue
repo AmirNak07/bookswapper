@@ -10,7 +10,4 @@ import LoginComponent from '@/components/LoginView/LoginComponent.vue'
 </template>
 
 <style scoped>
-.container {
-  margin: 10%;
-}
 </style>

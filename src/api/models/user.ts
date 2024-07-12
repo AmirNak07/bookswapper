@@ -1,21 +1,13 @@
-export class UserResponse {
+export interface UserResponse {
   status: string
   data: User
-  
-  constructor(status: string, data: User) {
-    this.status = status
-    this.data = data
-  }
 }
 
-export class User {
+export interface User {
   login: string
   username: string
   join_date: Date
-  
-  constructor(login: string, username: string, join_date: Date) {
-    this.login = login
-    this.username = username
-    this.join_date = join_date
-  }
+  biography: string
+  phone_number: string
+  city: string
 }
