@@ -26,7 +26,7 @@ function logOut(): void {
       </RouterLink>
     </div>
     <div class="right-nav">
-      <RouterLink to="/books" class="nav-button">
+      <RouterLink to="/books" class="nav-button" v-if="loggedIn()">
         <VIcon icon="mdi-bookshelf"></VIcon>
       </RouterLink>
       <RouterLink to="/login" class="nav-button" v-if="!loggedIn()">

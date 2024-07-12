@@ -27,7 +27,6 @@ defineProps<{
   border-radius: 20px;
   margin: 25px 0 25px 0;
   padding: 30px;
-  cursor: pointer;
   overflow-x:scroll
 }
 

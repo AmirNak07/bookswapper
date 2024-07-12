@@ -39,7 +39,7 @@ async function register() {
     }
     apiClient.setToken(tokenResponse.token);
     store.updateSettings(tokenResponse.token);
-    await router.push('/')
+    await router.push('/books')
   } else {
     alert('Поля заполнены неправильно')
   }

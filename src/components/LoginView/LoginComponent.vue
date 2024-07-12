@@ -26,7 +26,7 @@ async function login() {
     }
     apiClient.setToken(response.token);
     store.updateSettings(response.token);
-    await router.push('/')
+    await router.push('/books')
   }
 }
 </script>
